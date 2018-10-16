@@ -48,7 +48,7 @@ define luarocks::rock(
     }
   }
 
-  if $rock_version {
+  if defined('$rock_version') {
       $rock_version_str = "${rock_version}"
       if $rock_version_str =~ /-\d/ {
         $rock_version_check_str = $rock_version_str
